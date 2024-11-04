@@ -8,7 +8,9 @@ import PoseCard from '../components/PoseCards/PoseCard';
 
 const poses = [
     { name: 'Dog', description: 'A basic pose that stretches the entire body.' },
-    { name: 'Tree', description: 'A balancing pose that improves focus and concentration.' }
+    { name: 'Tree', description: 'A balancing pose that improves focus and concentration.' },
+    { name: 'Half-Standing Fold', description: "A powerful yoga pose."},
+    { name: 'Mountain', description: "A powerful yoga pose."}
 ];
 
 const Home = () => {

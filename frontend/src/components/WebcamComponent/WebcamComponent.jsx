@@ -48,7 +48,7 @@ const WebcamComponent = ({selectedPose}) => {
         console.log("Webcam not streaming, stopping frame capture");
         clearInterval(intervalRef.current);
       }
-    }, 7000);
+    }, 5000);
   };
 
   const captureAndSendFrame = () => {
@@ -129,11 +129,11 @@ const WebcamComponent = ({selectedPose}) => {
           </button>
         </div>
         {/* Display pose results here */}
-        <div className="mt-4 pt-10 flex flex-col justify-center items-center">
-          <h3 className="text-lg font-bold">Pose Estimation Results:</h3>
+        <div className="mt-8 p-4 border border-4 border-black flex flex-col justify-center items-center bg-[#cce5ff]">
+          <h3 className="text-lg font-bold underline">Pose Estimation Results:</h3>
           {poseResults && Array.isArray(poseResults) && poseResults.length > 0 ? (
             poseResults.map((prompt, index) => (
-              <div key={index}>{prompt}</div>
+              <div className="text-lg"key={index}>{prompt}</div>
             ))
           ) : (
             <p>No pose results available.</p> // Provide feedback if there are no results
